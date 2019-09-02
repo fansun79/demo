@@ -1,12 +1,10 @@
 package com.sun.demo.controller.req;
 
-import com.sun.demo.entity.enumeration.DataSource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @ApiModel
 @Data
@@ -20,6 +18,4 @@ public class CreateTradingAccountReq {
     @NotEmpty(message =  "密码不能为空")
     private String password;
 
-    @ApiModelProperty(value = "价格源",allowableValues = "FXALL,USM",required = true,example = "FXALL")
-    private DataSource dataSource;
 }
